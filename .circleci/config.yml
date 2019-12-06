@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  aaa:
+  build:
     docker: 
       - image: circleci/node:latest # the primary container, where your job's commands are run
     steps:
@@ -8,10 +8,6 @@ jobs:
       - run: npm install gatsby-cli
       - run: yarn gatsby new gatsby-site
       - run: cd gatsby-site && yarn gatsby build
-      #- store_artifacts:
-      #    path: gatsby-site/public
-workflows:
-  version: 2
-  workflow:
-    jobs:
-      - aaa
+      - store_artifacts:
+          path: gatsby-site/public
+          destination: site
