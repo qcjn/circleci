@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  build:
+  aaa:
     docker: 
       - image: circleci/node:latest # the primary container, where your job's commands are run
     steps:
