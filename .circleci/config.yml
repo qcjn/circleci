@@ -8,5 +8,5 @@
         - run: npm install gatsby-cli
         - run: yarn gatsby new gatsby-site
         - store_artifacts:
-            path: /temp
+            path: gatsby-site
 
