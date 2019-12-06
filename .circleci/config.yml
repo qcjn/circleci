@@ -6,4 +6,4 @@
       steps:
         - checkout # check out the code in the project directory
         - run: yarn install
-        - run: echo $environment # run the `echo` command
+        - run: export  # run the `echo` command
