@@ -5,5 +5,6 @@
         - image: circleci/node:latest # the primary container, where your job's commands are run
       steps:
         - checkout # check out the code in the project directory
-        - run: yarn install
-        - run: export  # run the `echo` command
+        - run: yarn gatsby-cli && yarn gatsby new gatsby-site
+        - store_artifacts:
+            path: ~
