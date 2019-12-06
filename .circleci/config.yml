@@ -3,11 +3,11 @@
     build:
       docker: 
         - image: circleci/node:latest # the primary container, where your job's commands are run
-      working_directory: ~/
+      working_directory: ~
       steps:
         - checkout # check out the code in the project directory
         - run: npm install gatsby-cli
         - run: yarn gatsby new gatsby-site
         - store_artifacts:
-            path: ~/
+            path: ~
 
