@@ -7,6 +7,4 @@ version: 2.1
         - checkout # check out the code in the project directory
         - run: npm install gatsby-cli
         - run: yarn gatsby new gatsby-site
-        - run: cd gatsby-site && yarn gatsby build
-        #- store_artifacts:
-        #    path: gatsby-site/public
+        - run: cd gatsby-site && yarn gatsby build  #- store_artifacts:  #    path: gatsby-site/public
