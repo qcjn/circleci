@@ -7,4 +7,4 @@
         - checkout # check out the code in the project directory
         - run: yarn gatsby-cli && yarn gatsby new gatsby-site
         - store_artifacts:
-            path: ~
+
