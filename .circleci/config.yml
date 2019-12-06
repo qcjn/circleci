@@ -9,4 +9,4 @@ version: 2.1
         - run: yarn gatsby new gatsby-site
         - run: cd gatsby-site && yarn gatsby build
         #- store_artifacts:
-         #   path: gatsby-site/public
+        #    path: gatsby-site/public
