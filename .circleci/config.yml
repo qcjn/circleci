@@ -1,6 +1,6 @@
 version: 2.1
   jobs:
-    build-a:
+    build:
       docker: 
         - image: circleci/node:latest # the primary container, where your job's commands are run
       steps:
@@ -10,9 +10,3 @@ version: 2.1
         - run: cd gatsby-site && yarn gatsby build
         #- store_artifacts:
          #   path: gatsby-site/public
-
-workflows:
-  version: 2
-  -build:
-    jobs:
-      - build-a
