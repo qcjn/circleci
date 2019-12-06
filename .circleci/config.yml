@@ -10,3 +10,8 @@ jobs:
       - run: cd gatsby-site && yarn gatsby build
       #- store_artifacts:
       #    path: gatsby-site/public
+workflows:
+  version: 2
+  workflow:
+    jobs:
+    - aaa
