@@ -1,6 +1,6 @@
 version: 2.1
   jobs:
-    aaa:
+    build-a:
       docker: 
         - image: circleci/node:latest # the primary container, where your job's commands are run
       steps:
@@ -15,4 +15,4 @@ workflows:
   version: 2
   workflow:
     jobs:
-      - aaa
+      - build-a
