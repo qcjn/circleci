@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run: echo "build"
       - save_cache:
-          key: cache-key-{{ .BuildNum }}
+          key: cache-key-
           paths:
             - package.json
   test:
