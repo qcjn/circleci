@@ -24,8 +24,7 @@ workflows:
   my-workflow:
     jobs:
       #- job1
-      - job2:
-          requires: job1
+      - job2#          requires: job1
   workflow2:
     jobs:
       -  job1
