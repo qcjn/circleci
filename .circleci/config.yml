@@ -16,9 +16,13 @@ jobs:
     docker: 
       - image: circleci/node:latest # the primary container, where your job's commands are run
     steps:
-      - checkout # check out the code in the project directory
       - run: echo "job2"
-      
+  
+  job3:
+    docker: 
+      - image: circleci/node:latest # the primary container, where your job's commands are run
+    steps:
+      - run: echo "job3"  
 workflows:
   version: 2
   my-workflow:
@@ -27,4 +31,8 @@ workflows:
       - job2:
           requires: 
             - job1
+      - job3: 
+          requires:
+            - job1
+            - job2
 
