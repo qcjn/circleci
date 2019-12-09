@@ -23,8 +23,8 @@ workflows:
   version: 2
   my-workflow:
     jobs:
-      #- job1
-      - job2#          requires: job1
-  workflow2:
-    jobs:
-      -  job1
+      - job1
+      - job2:
+          requires: 
+            - job1
+
