@@ -21,7 +21,7 @@ jobs:
       
 workflows:
   version: 2
-  workflow:
+  my-workflow:
     jobs:
       - job1
       - job2
