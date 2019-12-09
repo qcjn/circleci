@@ -26,4 +26,6 @@ workflows:
       - test:
           requires: 
             - build
+   workflow2:
+     jobs:
       - build
