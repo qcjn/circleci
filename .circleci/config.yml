@@ -5,5 +5,7 @@ jobs:
       - image: circleci/node:latest
     steps:
       #- checkout
+      - restore_cache:
+          keys: - v1-deps-nkHL0j2gThbhDPpGM0eMHg6sujg7Urs96z3u0DcAp9E=
       - run: echo "build"
 
