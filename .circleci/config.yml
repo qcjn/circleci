@@ -12,7 +12,6 @@ jobs:
       #- store_artifacts:
           #path: gatsby-site/public
           #destination: site
-jobs:
   job2:
     docker: 
       - image: circleci/node:latest # the primary container, where your job's commands are run
