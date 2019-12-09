@@ -1,38 +1,9 @@
 version: 2.1
 jobs:
-  job1:
+  build:
     docker: 
-      - image: circleci/node:latest # the primary container, where your job's commands are run
+      - image: circleci/node:latest
     steps:
-      - checkout # check out the code in the project directory
-      - run: echo "job1"
-      #- run: npm install gatsby-cli
-      #- run: yarn gatsby new gatsby-site
-      #- run: cd gatsby-site && yarn gatsby build
-      #- store_artifacts:
-          #path: gatsby-site/public
-          #destination: site
-  job2:
-    docker: 
-      - image: circleci/node:latest # the primary container, where your job's commands are run
-    steps:
-      - run: echo "job2"
-  
-  job3:
-    docker: 
-      - image: circleci/node:latest # the primary container, where your job's commands are run
-    steps:
-      - run: echo "job3"  
-workflows:
-  version: 2
-  my-workflow:
-    jobs:
-      - job1
-      - job2:
-          requires: 
-            - job1
-      - job3: 
-          requires:
-            - job1
-            - job2
+      #- checkout
+      - run: echo "build"
 
