@@ -4,8 +4,25 @@ jobs:
     docker: 
       - image: circleci/node:latest
     steps:
-      #- checkout
-      - restore_cache:
-          keys: v1-deps-nkHL0j2gThbhDPpGM0eMHg6sujg7Urs96z3u0DcAp9E=
+      - checkout
       - run: echo "build"
-
+      - save_cache:
+          key: cache-key
+          paths:
+            - package.json
+  test:
+    docker: 
+      - image: circleci/node:latest # the primary container, where your job's commands are run
+    steps:
+      - restore_cache:
+          key: cache-key
+      - run: echo "test" 
+      
+workflows:
+  version: 2
+  my-workflow:
+    jobs:
+      - build
+      - test:
+          requires: 
+            - build
