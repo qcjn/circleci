@@ -15,10 +15,9 @@ jobs:
     docker: 
       - image: circleci/ruby:latest
     steps:
-      - restore_cache:
-          key: cache-key-
+      #- restore_cache:
+      #    key: cache-key-
       - run: echo "test" 
-      - run: gem -v && bundle -v      
 workflows:
   version: 2
   my-workflow:
