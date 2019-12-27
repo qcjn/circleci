@@ -1,4 +1,4 @@
-version: 2.1
+version: 2
 jobs:
   build:
     docker: 
@@ -17,7 +17,7 @@ jobs:
     steps:
       #- restore_cache:
       #    key: cache-key-
-      - run: echo "test" 
+      - run: echo "hold" 
 workflows:
   version: 2
   my-workflow:
