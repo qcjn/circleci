@@ -12,12 +12,13 @@ jobs:
       #    paths:
       #      - package.json      
   hold:
-    #docker: 
-    #  - image: circleci/node:latest
-    #steps:
+  test:
+    docker: 
+      - image: circleci/node:latest
+    steps:
       #- restore_cache:
       #    key: cache-key-
-      #- run: echo "hold" 
+      - run: echo "hold" 
 workflows:
   version: 2
   my-workflow:
@@ -27,4 +28,7 @@ workflows:
           type: approval
           requires: 
             - build
+      - test:
+          requires:
+            - hold
           
