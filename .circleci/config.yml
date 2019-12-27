@@ -11,7 +11,7 @@ jobs:
           key: cache-key-{{ .BuildNum }}
           paths:
             - package.json
-      - run: npm -v && gem -v && bundle -v
+      - run: npm -v && bundle -v
   test:
     docker: 
       - image: circleci/node:latest # the primary container, where your job's commands are run
