@@ -17,7 +17,7 @@ jobs:
       - restore_cache:
           key: cache-key-
       - run: echo "test" 
-      - run: npm -v && bundle -v      
+      - run: gem -v && bundle -v      
 workflows:
   version: 2
   my-workflow:
