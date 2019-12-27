@@ -2,14 +2,15 @@ version: 2.1
 jobs:
   build:
     docker: 
-      - image: circleci/node:latest      
+      - image: circleci/ruby:latest-node      
     steps:
       - checkout
       - run: echo "build"
-      - save_cache:
-          key: cache-key-{{ .BuildNum }}
-          paths:
-            - package.json      
+      - run: gem -v && bundle -v && npm -v && node -v
+      #- save_cache:
+      #    key: cache-key-{{ .BuildNum }}
+      #    paths:
+      #      - package.json      
   test:
     docker: 
       - image: circleci/ruby:latest
@@ -23,6 +24,6 @@ workflows:
   my-workflow:
     jobs:
       - build
-      - test:
-          requires: 
-            - build
+      #- test:
+      #    requires: 
+      #      - build
