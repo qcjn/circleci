@@ -13,7 +13,7 @@ jobs:
       #      - package.json      
   hold:
     docker: 
-      - image: circleci/ruby:latest
+      - image: circleci/node:latest
     steps:
       #- restore_cache:
       #    key: cache-key-
