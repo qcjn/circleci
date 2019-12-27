@@ -12,8 +12,8 @@ jobs:
       #    paths:
       #      - package.json      
   test:
-    docker: 
-      - image: circleci/ruby:latest
+    #docker: 
+    #  - image: circleci/ruby:latest
     steps:
       - restore_cache:
           key: cache-key-
@@ -24,6 +24,8 @@ workflows:
   my-workflow:
     jobs:
       - build
-      #- test:
-      #    requires: 
-      #      - build
+      - test:
+          type: approval
+          requires: 
+            - build
+          
