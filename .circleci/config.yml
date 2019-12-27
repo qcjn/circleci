@@ -11,7 +11,7 @@ jobs:
       #    key: cache-key-{{ .BuildNum }}
       #    paths:
       #      - package.json      
-  test:
+  hold:
     docker: 
       - image: circleci/ruby:latest
     steps:
@@ -24,7 +24,7 @@ workflows:
   my-workflow:
     jobs:
       - build:
-      - test:
+      - hold:
           type: approval
           requires: 
             - build
