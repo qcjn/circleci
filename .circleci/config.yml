@@ -14,7 +14,7 @@ jobs:
   hold:
   test:
     docker: 
-      - image: circleci/node:latest
+      - image: circleci/node
     steps:
       #- restore_cache:
       #    key: cache-key-
