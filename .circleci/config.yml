@@ -14,11 +14,12 @@ jobs:
   hold:
   test:
     docker: 
-      - image: circleci/node
+      - image: andreysenov/firebase-tools
     steps:
       #- restore_cache:
       #    key: cache-key-
-      - run: echo "hold" 
+      - run: echo "hold"
+      - run: firebase -h
 workflows:
   version: 2
   my-workflow:
