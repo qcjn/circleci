@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker: 
-      - image: circleci/ruby:latest-node      
+      - image: jekyll/jekyll:latest #circleci/ruby:latest-node      
     steps:
       - checkout
       - run: echo "build"
