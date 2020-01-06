@@ -3,7 +3,6 @@ jobs:
   build:
     docker: 
       - image: jekyll/jekyll:latest #circleci/ruby:latest-node
-      - docker_layer_caching: true
     steps:
       - checkout
       - run: echo "build"
@@ -19,7 +18,8 @@ jobs:
     steps:
       #- restore_cache:
       #    key: cache-key-
-      - run: echo "hold"
+      - setup_remote_docker:
+          docker_layer_caching: true
       - run: firebase -h
 workflows:
   version: 2
