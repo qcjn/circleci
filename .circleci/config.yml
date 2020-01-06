@@ -18,8 +18,6 @@ jobs:
     steps:
       #- restore_cache:
       #    key: cache-key-
-      - setup_remote_docker:
-          docker_layer_caching: true
       - run: firebase -h
 workflows:
   version: 2
